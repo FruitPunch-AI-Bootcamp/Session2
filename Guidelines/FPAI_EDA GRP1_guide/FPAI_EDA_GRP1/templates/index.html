@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-2">
+        <br />
+        <br />
+        <br />
+        <p><a class="btn btn-default" href="/mJan">January</a></p>
+        <br />
+        <p><a class="btn btn-default" href="/mMar">March</a></p>
+        <br />
+        <p><a class="btn btn-default" href="/mAug">August</a></p>
+        <br />
+        <p><a class="btn btn-default" href="/mOct">October</a></p>
+
+    </div>
+    <div class="col-md-10">
+        <h1>{{month}} Wind Speed Visualization </h1>
+        <div class="container" align="left">
+            <embed type="image/svg+xml" src={{graph_data|safe}} style='max-width:700px' />
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock %}
